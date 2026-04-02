@@ -31,10 +31,10 @@
       <div class="container">
         <div class="hero-card">
           <div class="eyebrow">Projet personnel</div>
-          <h1 class="page-title">Cadrage d’un projet IA pour l’analyse de pratiques professionnelles</h1>
+          <h1 class="page-title">Faire d’IODKIP un outil d’analyse des pratiques professionnelles</h1>
           <p class="lead">
-            Projet de cadrage stratégique fondé sur des données issues d’un progiciel
-            collectant des informations sur les pratiques de conseillers en insertion professionnelle.
+            Projet de cadrage stratégique et technique à la croisée de mon expérience métier,
+            de mon travail de thèse et de ma formation en data science.
           </p>
         </div>
       </div>
@@ -44,72 +44,130 @@
       <div class="container content-grid">
         <div>
           <article class="content-block">
-            <h2>Contexte</h2>
+            <h2>Le projet en bref</h2>
             <p>
-              Ce projet prend appui sur mon ancienne expérience professionnelle
-              autour d’un environnement de travail où des données étaient collectées
-              sur les pratiques de terrain dans le domaine de l’insertion professionnelle.
+              Ce projet prolonge directement mon travail de thèse et mon ancienne expérience
+              autour d’IODKIP, un progiciel utilisé dans le champ de l’insertion professionnelle.
+            </p>
+            <p>
+              Mon objectif est de cadrer une évolution réaliste du logiciel pour passer
+              d’un outil de saisie et de pilotage local à un outil d’analyse des pratiques,
+              utile à la formation continue, à la réflexivité des équipes et à l’évolution
+              de la méthode IOD.
             </p>
           </article>
 
           <article class="content-block">
-            <h2>Objectif</h2>
+            <h2>La problématique</h2>
             <p>
-              L’objectif est de cadrer une solution d’intelligence artificielle capable
-              d’identifier certaines pratiques efficaces, de prédire des résultats associés
-              et d’adosser ces analyses à un moteur de recommandation enrichi par un LLM.
+              IODKIP collecte déjà de nombreuses données sur les demandeurs d’emploi,
+              les entreprises, les offres et les interactions menées par les équipes.
+              En revanche, ces données ne sont pas encore exploitées comme une base
+              d’analyse globale des pratiques.
+            </p>
+            <p>
+              L’enjeu est donc de mieux structurer et interpréter ces informations pour
+              repérer les pratiques les plus associées aux sorties en emploi durable validé (EDV),
+              sans transformer l’outil en système de contrôle ou de prescription automatique.
             </p>
           </article>
 
           <article class="content-block">
-            <h2>Axes envisagés</h2>
-            <ul class="inline-list">
-              <li>classification de pratiques ;</li>
-              <li>prédiction de résultats ;</li>
-              <li>recommandation ;</li>
-              <li>explication ou accompagnement via un LLM.</li>
+            <h2>La solution envisagée</h2>
+            <p>
+              <strong>Brique 1 — prioritaire :</strong> construire un modèle de classification
+              capable d’estimer la probabilité de sortie en emploi durable validé (EDV) à partir
+              du profil du demandeur d’emploi, des interactions avec les acteurs du dispositif
+              et de la qualité des offres proposées.
+            </p>
+            <p>
+              La sortie n’a pas vocation à décider à la place des professionnels. Elle doit
+              permettre une lecture collective des pratiques : repérer les pratiques positives
+              sous-investies, discuter les pratiques négatives encore investies et soutenir
+              les échanges entre chargés de mission, pilotes et formateurs.
+            </p>
+            <p>
+              <strong>Brique 2 — différée :</strong> ajouter un système de suggestion documentaire
+              via RAG/LLM pour orienter les utilisateurs vers des ressources pertinentes du corpus
+              Transfer, sans se substituer au formateur.
+            </p>
+          </article>
+
+          <article class="content-block">
+            <h2>Ce que ce projet montre déjà</h2>
+            <ul>
+              <li>ma capacité à partir d’un besoin métier réel ;</li>
+              <li>mon aptitude à auditer un existant complexe ;</li>
+              <li>ma capacité à définir une V1 réaliste, priorisée et intégrable ;</li>
+              <li>ma vigilance sur les enjeux éthiques, RGPD et d’acceptabilité ;</li>
+              <li>ma capacité à articuler recherche, terrain et data science.</li>
             </ul>
           </article>
 
           <article class="content-block">
-            <h2>Intérêt du projet</h2>
-            <p>
-              Ce projet permet d’articuler mon expérience passée, ma formation actuelle
-              en data science et une réflexion sur l’utilité concrète d’une solution IA
-              pour des pratiques professionnelles réelles.
-            </p>
+            <h2>Compétences déjà mobilisables</h2>
+            <ul>
+              <li>analyse du besoin et compréhension fine du terrain IOD ;</li>
+              <li>conduite de projet et formalisation d’un cadrage ;</li>
+              <li>analyse statistique et logique de modélisation supervisée ;</li>
+              <li>Python, SQL et structuration de pipelines data ;</li>
+              <li>évaluation critique, interprétation et restitution ;</li>
+              <li>réflexion éthique sur les usages de l’IA.</li>
+            </ul>
           </article>
 
           <article class="content-block">
-            <h2>Statut</h2>
+            <h2>Compétences à renforcer pour le réaliser</h2>
+            <ul>
+              <li>ingénierie de données relationnelles et temporelles complexes ;</li>
+              <li>anonymisation avancée et gouvernance RGPD by design ;</li>
+              <li>monitoring en production, drift et cycle de vie du modèle ;</li>
+              <li>explicabilité avancée et cadrage de l’interprétation ;</li>
+              <li>intégration produit dans une architecture logicielle existante ;</li>
+              <li>RAG/LLM documentaire pour une future brique 2.</li>
+            </ul>
+          </article>
+
+          <article class="content-block">
+            <h2>Statut du projet</h2>
             <p>
-              Il s’agit d’un projet de cadrage à réaliser. Il sert de base au rapport
-              de conduite de projet et sera présenté comme une proposition structurée,
-              et non comme un système déjà implémenté.
+              Il s’agit d’un projet de cadrage stratégique et technique. Le système n’est
+              pas encore développé, mais le besoin, les acteurs, les risques, la feuille
+              de route et la V1 prioritaire sont déjà définis.
+            </p>
+            <p>
+              Mon objectif est de pouvoir transformer rapidement ce cadrage en prototype
+              sur la brique 1.
+            </p>
+            <p>
+              <a href="../assets/docs/rapport-IODKIP-openclassrooms.pdf" target="_blank" rel="noopener">
+                Consulter le rapport de cadrage (PDF)
+              </a>
             </p>
           </article>
         </div>
 
         <aside>
           <div class="aside-box">
-            <h3>Dimensions clés</h3>
-            <ul class="inline-list">
-              <li>analyse du besoin ;</li>
-              <li>audit des données ;</li>
-              <li>choix méthodologiques ;</li>
-              <li>enjeux éthiques ;</li>
-              <li>vision stratégique.</li>
+            <h3>En 2 minutes</h3>
+            <ul>
+              <li>un besoin réel ;</li>
+              <li>une base métier déjà existante ;</li>
+              <li>une V1 ML prioritaire ;</li>
+              <li>une brique RAG différée ;</li>
+              <li>un projet à la croisée du métier, de la recherche et de la data science.</li>
             </ul>
           </div>
 
           <div class="aside-box">
-            <h3>À ajouter plus tard</h3>
-            <ul class="inline-list">
-              <li>rapport PDF ;</li>
-              <li>schéma d’architecture cible ;</li>
-              <li>roadmap ;</li>
-              <li>indicateurs de succès ;</li>
-              <li>hypothèses de mise en œuvre.</li>
+            <h3>Livrables visés</h3>
+            <ul>
+              <li>audit des données IODKIP ;</li>
+              <li>design analytique des parcours ;</li>
+              <li>prototype EDV / non-EDV ;</li>
+              <li>lecture agrégée au niveau équipe ;</li>
+              <li>suivi du drift ;</li>
+              <li>préparation de l’intégration dans la refonte logicielle.</li>
             </ul>
           </div>
         </aside>
