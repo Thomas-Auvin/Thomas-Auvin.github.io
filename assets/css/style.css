@@ -183,13 +183,21 @@ button:focus-visible {
   border: 1px solid rgba(191, 219, 254, 0.95);
 }
 
-.hero h1,
-.page-title {
+.hero h1 {
   margin: 0 0 1rem;
   line-height: 1.06;
   letter-spacing: -0.04em;
   font-size: clamp(2.3rem, 4.8vw, 4rem);
   max-width: 14ch;
+}
+
+.page-title {
+  margin: 0 0 1rem;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  max-width: min(24ch, 100%);
+  text-wrap: balance;
 }
 
 .hero-subtitle {
