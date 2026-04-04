@@ -8,7 +8,91 @@
     name="description"
     content="Parcours de Thomas Auvin en psychologie sociale : thèse, publications, enseignement et approches de recherche."
   />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .research-page {
+      padding-bottom: 4rem;
+    }
+
+    .icon-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #eff6ff 0%, #f8fbff 100%);
+      border: 1px solid #bfdbfe;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .icon-pill svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+    }
+
+    .block-title-row,
+    .aside-title-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .block-title-row h2,
+    .aside-title-row h3 {
+      margin: 0;
+    }
+
+    .research-note {
+      padding: 1rem 1.1rem;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #eff6ff 0%, #f8fbff 100%);
+      border: 1px solid #bfdbfe;
+      margin-top: 1rem;
+      color: var(--muted);
+    }
+
+    .research-note strong {
+      color: var(--accent);
+    }
+
+    .resource-links {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    .resource-links li {
+      margin-bottom: 0.55rem;
+    }
+
+    .resource-links a {
+      font-weight: 600;
+    }
+
+    @media (max-width: 640px) {
+      .block-title-row,
+      .aside-title-row {
+        gap: 0.7rem;
+      }
+
+      .icon-pill {
+        width: 38px;
+        height: 38px;
+      }
+
+      .icon-pill svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -34,18 +118,34 @@
           <h1 class="page-title">Un ancrage de recherche qui continue à nourrir ma pratique</h1>
           <p class="lead">
             En parallèle de ma formation en data science, je conserve un ancrage en psychologie sociale
-            et en recherche. Cette partie présente quelques repères sur ce versant de mon parcours :
-            ma thèse, mes publications, ainsi que mes activités d’enseignement.
+            et en recherche. Cette page présente quelques repères sur ce versant de mon parcours :
+            ma thèse, mes publications et mes activités d’enseignement.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="page-content">
+    <section class="research-page">
       <div class="container content-grid">
         <div>
           <article class="content-block">
-            <h2>Approches en psychologie sociale</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3v4"/>
+                  <path d="M12 17v4"/>
+                  <path d="M4.9 4.9 7.7 7.7"/>
+                  <path d="m16.3 16.3 2.8 2.8"/>
+                  <path d="M3 12h4"/>
+                  <path d="M17 12h4"/>
+                  <path d="m4.9 19.1 2.8-2.8"/>
+                  <path d="m16.3 7.7 2.8-2.8"/>
+                  <circle cx="12" cy="12" r="4"/>
+                </svg>
+              </span>
+              <h2>Approches en psychologie sociale</h2>
+            </div>
+
             <p>
               Cette dimension de mon parcours ne constitue pas le cœur de ce portfolio,
               mais elle permet de situer l’origine de certaines de mes approches :
@@ -54,39 +154,70 @@
             </p>
             <p>
               Mon parcours en psychologie sociale nourrit encore aujourd’hui ma manière d’aborder
-              les projets data : attention aux pratiques réelles, prise en compte des contextes d’usage,
+              les projets data : prise en compte des pratiques réelles, attention aux contextes d’usage,
               intérêt pour les effets sociaux des dispositifs et exigence de mise à distance réflexive.
             </p>
+
+            <div class="research-note">
+              <strong>Ce que cet ancrage apporte à mon profil :</strong>
+              une manière d’aborder les projets data qui ne sépare pas la technique,
+              l’usage, le contexte organisationnel et les effets concrets des dispositifs.
+            </div>
           </article>
 
           <article class="content-block">
-            <h2>Thèse</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 7.5A2.5 2.5 0 0 1 6.5 5H20"/>
+                  <path d="M4 7.5v9A2.5 2.5 0 0 0 6.5 19H20"/>
+                  <path d="M8 8h8"/>
+                  <path d="M8 12h8"/>
+                  <path d="M8 16h5"/>
+                </svg>
+              </span>
+              <h2>Thèse</h2>
+            </div>
+
             <p>
-              J’ai soutenu une thèse en psychologie sociale portant sur les pratiques d’accompagnement
-              et les conditions d’accès à l’emploi durable.
+              J’ai soutenu une thèse en psychologie sociale portant sur les pratiques
+              d’accompagnement et les conditions d’accès à l’emploi durable.
             </p>
             <p>
               Cette recherche s’inscrit dans une réflexion plus large sur l’analyse des pratiques,
               les dispositifs d’accompagnement et les effets concrets des méthodes mobilisées sur le terrain.
             </p>
             <p>
-              <a href="https://theses.fr/2021BORD0355" target="_blank">Consulter la référence de thèse</a>
+              <a href="https://theses.fr/2021BORD0355" target="_blank" rel="noopener">
+                Consulter la référence de thèse
+              </a>
             </p>
           </article>
 
           <article class="content-block">
-            <h2>Publications</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 7h8"/>
+                  <path d="M8 12h8"/>
+                  <path d="M8 17h5"/>
+                  <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/>
+                </svg>
+              </span>
+              <h2>Publications</h2>
+            </div>
+
             <p>
-              J'ai eu le plaisir de publier avec plusieurs collègues sur mes sujets de recherche. 
+              J’ai eu le plaisir de publier avec plusieurs collègues sur mes sujets de recherche.
             </p>
-            <ul class="inline-list">
+            <ul class="resource-links">
               <li>
-                <a href="https://annales.org/ri/2021/resumes/mai/18-ri-resum-FR-AN-mai-2021.html" target="_blank">
+                <a href="https://annales.org/ri/2021/resumes/mai/18-ri-resum-FR-AN-mai-2021.html" target="_blank" rel="noopener">
                   Voir la publication dans les Annales des Mines
                 </a>
               </li>
               <li>
-                <a href="https://www.sciencedirect.com/science/article/pii/S1420253024000633?via%3Dihub" target="_blank">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1420253024000633?via%3Dihub" target="_blank" rel="noopener">
                   Voir la publication sur ScienceDirect
                 </a>
               </li>
@@ -94,26 +225,51 @@
           </article>
 
           <article class="content-block">
-            <h2>Enseignement</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 14v7"/>
+                  <path d="M9 18h6"/>
+                  <path d="M12 3a4 4 0 0 1 4 4c0 2.2-1.1 3.6-2.4 4.7-.7.6-1.3 1.1-1.6 1.8-.3-.7-.9-1.2-1.6-1.8C9.1 10.6 8 9.2 8 7a4 4 0 0 1 4-4Z"/>
+                </svg>
+              </span>
+              <h2>Enseignement</h2>
+            </div>
+
             <p>
               J’interviens également dans l’enseignement, ce qui prolonge mon intérêt pour
               la transmission, la structuration de contenus complexes et la mise en discussion
               des méthodes et des concepts.
             </p>
             <p>
-              J'ai le plaisir d'intervenir à l'IRTS de Nouvelle Aquitaine sur le sujet de la psychologie sociale.
-              J'ai eu le plaisir de réaliser des interventions pour l'Université de Bordeaux sur l'accompagnement 
-              à la recherche de stage et la connaissance sur monde professionnel pour les étudiant de psychologie.
-              J'ai eu aussi le plaisir de réaliser une intervention pour l'université de Poitiers 
-              sur le sujet de la psychologie sociale appliqué à l'insertion professionnelle.
-              Et enfin j'ai eu l'honneur d'accompagner deux mémoires d'étudiants de le PJJ.
+              J’ai eu le plaisir d’intervenir à l’IRTS de Nouvelle-Aquitaine sur le sujet
+              de la psychologie sociale. J’ai aussi réalisé des interventions pour l’Université
+              de Bordeaux sur l’accompagnement à la recherche de stage et la connaissance
+              du monde professionnel pour les étudiants de psychologie.
+            </p>
+            <p>
+              J’ai également eu l’occasion d’intervenir pour l’Université de Poitiers
+              sur le sujet de la psychologie sociale appliquée à l’insertion professionnelle,
+              et d’accompagner deux mémoires d’étudiants de la PJJ.
             </p>
           </article>
         </div>
 
         <aside>
           <div class="aside-box">
-            <h3>Ce que cette expérience apporte à mon profil</h3>
+            <div class="aside-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 12h6"/>
+                  <path d="M15 12h6"/>
+                  <path d="M12 3v6"/>
+                  <path d="M12 15v6"/>
+                  <circle cx="12" cy="12" r="2.5"/>
+                </svg>
+              </span>
+              <h3>Ce que cette expérience apporte à mon profil</h3>
+            </div>
+
             <ul class="inline-list">
               <li>attention aux usages réels ;</li>
               <li>analyse des pratiques ;</li>
@@ -124,7 +280,18 @@
           </div>
 
           <div class="aside-box">
-            <h3>Ressources disponibles</h3>
+            <div class="aside-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>
+                  <path d="M14 2v6h6"/>
+                  <path d="M8 13h8"/>
+                  <path d="M8 17h5"/>
+                </svg>
+              </span>
+              <h3>Ressources disponibles</h3>
+            </div>
+
             <ul class="inline-list">
               <li>référence de thèse ;</li>
               <li>publications ;</li>

@@ -8,7 +8,91 @@
     name="description"
     content="À propos de Thomas Auvin : parcours, approche de la data science, analyse des usages et utilité des solutions pour les organisations."
   />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .about-page {
+      padding-bottom: 4rem;
+    }
+
+    .icon-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #eff6ff 0%, #f8fbff 100%);
+      border: 1px solid #bfdbfe;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .icon-pill svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+    }
+
+    .block-title-row,
+    .aside-title-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .block-title-row h2,
+    .aside-title-row h3 {
+      margin: 0;
+    }
+
+    .about-callout {
+      padding: 1rem 1.1rem;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #eff6ff 0%, #f8fbff 100%);
+      border: 1px solid #bfdbfe;
+      margin-top: 1rem;
+      color: var(--muted);
+    }
+
+    .about-callout strong {
+      color: var(--accent);
+    }
+
+    .link-list {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    .link-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .link-list a {
+      font-weight: 600;
+    }
+
+    @media (max-width: 640px) {
+      .block-title-row,
+      .aside-title-row {
+        gap: 0.7rem;
+      }
+
+      .icon-pill {
+        width: 38px;
+        height: 38px;
+      }
+
+      .icon-pill svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -42,11 +126,27 @@
       </div>
     </section>
 
-    <section class="page-content">
+    <section class="about-page">
       <div class="container content-grid">
         <div>
           <article class="content-block">
-            <h2>Mon approche</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3v4"/>
+                  <path d="M12 17v4"/>
+                  <path d="M4.9 4.9 7.7 7.7"/>
+                  <path d="m16.3 16.3 2.8 2.8"/>
+                  <path d="M3 12h4"/>
+                  <path d="M17 12h4"/>
+                  <path d="m4.9 19.1 2.8-2.8"/>
+                  <path d="m16.3 7.7 2.8-2.8"/>
+                  <circle cx="12" cy="12" r="4"/>
+                </svg>
+              </span>
+              <h2>Mon approche</h2>
+            </div>
+
             <p>
               Je ne conçois pas la data science comme une rupture avec mon parcours précédent,
               mais comme un prolongement de ma posture de chercheur : comprendre des situations complexes,
@@ -59,10 +159,29 @@
               techniquement crédible et d’en expliciter les limites, les conditions d’usage
               et les apports pour les organisations.
             </p>
+
+            <div class="about-callout">
+              <strong>Fil conducteur :</strong>
+              relier compréhension du terrain, rigueur méthodologique et conception
+              de solutions data réellement utiles.
+            </div>
           </article>
 
           <article class="content-block">
-            <h2>Ma manière d’aborder la data science</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 11.5A2.5 2.5 0 1 0 9 6.5a2.5 2.5 0 0 0 0 5Z"/>
+                  <path d="M15 17.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                  <path d="m11.2 9.2 1.6 1.6"/>
+                  <path d="m12.8 14.8-1.6-1.6"/>
+                  <path d="M4 12c0-4.4 3.6-8 8-8"/>
+                  <path d="M20 12c0 4.4-3.6 8-8 8"/>
+                </svg>
+              </span>
+              <h2>Ma manière d’aborder la data science</h2>
+            </div>
+
             <ul class="inline-list">
               <li>partir d’un besoin réel et d’un contexte d’usage identifiable ;</li>
               <li>structurer une démarche méthodologique explicite ;</li>
@@ -72,7 +191,16 @@
           </article>
 
           <article class="content-block">
-            <h2>Ce que je recherche</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="8"/>
+                  <path d="M12 8v4l2.5 2.5"/>
+                </svg>
+              </span>
+              <h2>Ce que je recherche</h2>
+            </div>
+
             <p>
               Mon objectif professionnel est de contribuer à des projets data ou IA
               qui articulent qualité méthodologique, compréhension du terrain,
@@ -83,7 +211,16 @@
 
         <aside>
           <div class="aside-box">
-            <h3>En quelques mots</h3>
+            <div class="aside-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z"/>
+                  <path d="M4 20a8 8 0 0 1 16 0"/>
+                </svg>
+              </span>
+              <h3>En quelques mots</h3>
+            </div>
+
             <p>
               Data Scientist en formation, spécialisé dans la conception
               et l’évaluation de solutions d’intelligence artificielle,
@@ -93,7 +230,19 @@
           </div>
 
           <div class="aside-box">
-            <h3>Axes d’intérêt</h3>
+            <div class="aside-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 12h6"/>
+                  <path d="M15 12h6"/>
+                  <path d="M12 3v6"/>
+                  <path d="M12 15v6"/>
+                  <circle cx="12" cy="12" r="2.5"/>
+                </svg>
+              </span>
+              <h3>Axes d’intérêt</h3>
+            </div>
+
             <ul class="inline-list">
               <li>évaluation de systèmes IA ;</li>
               <li>analyse des usages ;</li>
@@ -104,8 +253,17 @@
           </div>
 
           <div class="aside-box">
-            <h3>Liens rapides</h3>
-            <ul class="inline-list">
+            <div class="aside-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 13a5 5 0 0 0 7.5.4l2.1-2.1a5 5 0 0 0-7.1-7.1l-1.2 1.2"/>
+                  <path d="M14 11a5 5 0 0 0-7.5-.4l-2.1 2.1a5 5 0 0 0 7.1 7.1l1.2-1.2"/>
+                </svg>
+              </span>
+              <h3>Liens rapides</h3>
+            </div>
+
+            <ul class="link-list">
               <li><a href="projets.html">Voir les projets</a></li>
               <li><a href="competences.html">Voir les compétences</a></li>
               <li><a href="psychologie-sociale-recherche.html">Psychologie sociale et recherche</a></li>

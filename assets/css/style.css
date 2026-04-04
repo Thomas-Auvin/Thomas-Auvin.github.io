@@ -72,6 +72,10 @@ button:focus-visible {
   margin: 0 auto;
 }
 
+/* =========================
+   HEADER / NAV
+   ========================= */
+
 .site-header {
   position: sticky;
   top: 0;
@@ -121,6 +125,10 @@ button:focus-visible {
   color: var(--accent);
   background: rgba(219, 234, 254, 0.65);
 }
+
+/* =========================
+   HERO / PAGE HEADERS
+   ========================= */
 
 .hero {
   padding: 6rem 0 4rem;
@@ -200,6 +208,11 @@ button:focus-visible {
   text-wrap: balance;
 }
 
+.page-title-wide {
+  max-width: min(30ch, 100%);
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+}
+
 .hero-subtitle {
   margin: 0 0 1rem;
   color: var(--muted);
@@ -222,6 +235,10 @@ button:focus-visible {
   gap: 0.9rem;
   margin-top: 1.7rem;
 }
+
+/* =========================
+   BUTTONS
+   ========================= */
 
 .button {
   display: inline-flex;
@@ -267,14 +284,60 @@ button:focus-visible {
   background: rgba(239, 246, 255, 0.95);
 }
 
-.hero-aside {
-  padding: 1.75rem;
-  display: flex;
-  flex-direction: column;
+/* =========================
+   COMMON ICON / TITLE UTILS
+   ========================= */
+
+.icon-pill {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #eff6ff 0%, #f8fbff 100%);
+  border: 1px solid #bfdbfe;
+  color: var(--accent);
+  flex-shrink: 0;
 }
 
-.hero-aside h2,
+.icon-pill svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+.block-title-row,
+.aside-title-row,
+.card-title-row,
+.section-card-title,
+.hero-aside-title,
+.skills-center-head,
+.skills-branch-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.block-title-row h2,
+.aside-title-row h3,
+.card-title-row h2,
+.card-title-row h3,
+.section-card-title h3,
+.hero-aside-title h2,
+.skills-center-head h2,
+.skills-branch-head h3 {
+  margin: 0;
+}
+
+.hero-aside-title .icon-pill {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+}
+
+.hero-aside-title h2,
 .section-title {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -283,12 +346,53 @@ button:focus-visible {
   letter-spacing: -0.02em;
 }
 
+.project-link,
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 700;
+}
+
+.project-link svg,
+.contact-link svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+
+/* =========================
+   GENERIC PAGE BLOCKS
+   ========================= */
+
+.home-projects,
+.projects-page,
+.about-page,
+.reflexivite-page,
+.research-page,
+.contact-page,
+.project-page,
+.skills-page {
+  padding-bottom: 4rem;
+}
+
+.hero-aside {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .hero-aside p {
   margin: 0 0 0.9rem;
   color: var(--muted);
 }
 
-.hero-highlight {
+.hero-highlight,
+.about-callout,
+reflexive-note,
+.project-note,
+.research-note {
   margin-top: 1.4rem;
   padding: 1rem 1.1rem;
   border-radius: 16px;
@@ -296,7 +400,11 @@ button:focus-visible {
   border: 1px solid #bfdbfe;
 }
 
-.hero-highlight strong {
+.hero-highlight strong,
+.about-callout strong,
+.reflexive-note strong,
+.project-note strong,
+.research-note strong {
   color: var(--accent);
 }
 
@@ -319,6 +427,25 @@ button:focus-visible {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.4rem;
 }
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: 1.6rem;
+  align-items: start;
+}
+
+.page-hero {
+  padding: 5rem 0 2.4rem;
+}
+
+.page-content {
+  padding-bottom: 4rem;
+}
+
+/* =========================
+   CARDS / BLOCKS / ASIDES
+   ========================= */
 
 .card {
   padding: 1.55rem;
@@ -347,30 +474,6 @@ button:focus-visible {
 .card p {
   margin: 0 0 1rem;
   color: var(--muted);
-}
-
-.inline-list {
-  margin: 0;
-  padding-left: 1.1rem;
-}
-
-.inline-list li {
-  margin-bottom: 0.35rem;
-}
-
-.page-hero {
-  padding: 5rem 0 2.4rem;
-}
-
-.page-content {
-  padding-bottom: 4rem;
-}
-
-.content-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
-  gap: 1.6rem;
-  align-items: start;
 }
 
 .content-block {
@@ -427,6 +530,10 @@ button:focus-visible {
   color: var(--muted);
 }
 
+/* =========================
+   TAGS / BADGES / LISTS
+   ========================= */
+
 .badge-row {
   display: flex;
   flex-wrap: wrap;
@@ -466,6 +573,40 @@ button:focus-visible {
   color: #c2410c;
 }
 
+.inline-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.inline-list li {
+  margin-bottom: 0.35rem;
+}
+
+.profile-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.profile-list li {
+  margin-bottom: 0.45rem;
+}
+
+.link-list,
+.resource-links {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.link-list li,
+.resource-links li {
+  margin-bottom: 0.5rem;
+}
+
+.link-list a,
+.resource-links a {
+  font-weight: 600;
+}
+
 .project-card {
   display: flex;
   flex-direction: column;
@@ -481,26 +622,6 @@ button:focus-visible {
   margin-top: auto;
   color: var(--muted-soft);
   font-size: 0.92rem;
-}
-
-.profile-list {
-  margin: 0;
-  padding-left: 1.1rem;
-}
-
-.profile-list li {
-  margin-bottom: 0.45rem;
-}
-
-.site-footer {
-  padding: 2.4rem 0 3.4rem;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.site-footer .container {
-  border-top: 1px solid var(--border);
-  padding-top: 1.7rem;
 }
 
 /* =========================
@@ -537,11 +658,25 @@ button:focus-visible {
   z-index: 2;
 }
 
+.skills-center-head {
+  justify-content: center;
+}
+
+.skills-center-head .icon-pill {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+}
+
+.skills-center-head-wrap {
+  text-align: left;
+}
+
 .skills-center-eyebrow {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.35rem;
   padding: 0.38rem 0.8rem;
   border-radius: 999px;
   background: #dbeafe;
@@ -578,7 +713,7 @@ button:focus-visible {
 }
 
 .skills-branch h3 {
-  margin: 0 0 0.9rem;
+  margin: 0;
   font-size: 1.08rem;
   line-height: 1.25;
   letter-spacing: -0.015em;
@@ -693,6 +828,25 @@ button:focus-visible {
   transform: rotate(-26deg);
 }
 
+/* =========================
+   FOOTER
+   ========================= */
+
+.site-footer {
+  padding: 2.4rem 0 3.4rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.site-footer .container {
+  border-top: 1px solid var(--border);
+  padding-top: 1.7rem;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
 @media (max-width: 980px) {
   .skills-map {
     display: grid;
@@ -716,6 +870,10 @@ button:focus-visible {
 
   .skills-center p {
     margin-inline: 0;
+  }
+
+  .skills-center-head {
+    justify-content: flex-start;
   }
 }
 
@@ -788,5 +946,30 @@ button:focus-visible {
 
   .nav-links a {
     padding: 0.55rem 0.75rem;
+  }
+
+  .block-title-row,
+  .aside-title-row,
+  .card-title-row,
+  .section-card-title,
+  .hero-aside-title,
+  .skills-center-head,
+  .skills-branch-head {
+    gap: 0.7rem;
+  }
+
+  .icon-pill {
+    width: 38px;
+    height: 38px;
+  }
+
+  .icon-pill svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .skills-center-head .icon-pill {
+    width: 42px;
+    height: 42px;
   }
 }

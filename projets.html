@@ -8,7 +8,130 @@
     name="description"
     content="Projets de Thomas Auvin : évaluation de systèmes IA, solution data orientée métier et cadrage de projet IA."
   />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .projects-page {
+      padding-bottom: 4rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+      align-items: stretch;
+    }
+
+    .icon-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #eff6ff 0%, #f8fbff 100%);
+      border: 1px solid #bfdbfe;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .icon-pill svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100%;
+    }
+
+    .card-title-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .card-title-row h2 {
+      margin: 0;
+      font-size: 1.22rem;
+      line-height: 1.28;
+      letter-spacing: -0.02em;
+    }
+
+    .project-card p {
+      color: var(--muted);
+    }
+
+    .project-card .inline-list {
+      margin-top: 0.95rem;
+      margin-bottom: 1.15rem;
+    }
+
+    .project-card .inline-list li {
+      color: var(--muted);
+      margin-bottom: 0.45rem;
+    }
+
+    .project-meta {
+      margin-top: auto;
+      color: var(--muted-soft);
+      font-size: 0.92rem;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-weight: 700;
+    }
+
+    .project-link svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+    }
+
+    .projects-intro {
+      margin-bottom: 1.8rem;
+    }
+
+    .projects-intro .content-block {
+      margin-bottom: 0;
+    }
+
+    .projects-intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 960px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .card-title-row {
+        gap: 0.7rem;
+      }
+
+      .icon-pill {
+        width: 38px;
+        height: 38px;
+      }
+
+      .icon-pill svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -41,76 +164,176 @@
       </div>
     </section>
 
-        <article class="content-block">
-          <h2>Projet SportSee — Assistant : évaluation et amélioration d’un système LLM</h2>
-          <p>
-            Ce projet part d’un prototype RAG initial et le fait évoluer vers un assistant
-            d’analyses sportives capable de traiter deux familles de questions :
-            des questions documentaires sur des contenus textuels, et des questions
-            statistiques sur des données structurées.
-          </p>
-          <p>
-            Mon travail a consisté à ne pas me limiter à “faire fonctionner” un LLM :
-            j’ai mis en place une démarche d’évaluation formelle, puis j’ai restructuré
-            le système avec une architecture hybride RAG + SQL, un agent PydanticAI,
-            et un socle minimal d’industrialisation.
-          </p>
-          <ul class="inline-list">
-            <li><strong>Type :</strong> projet réalisé</li>
-            <li><strong>Axes travaillés :</strong> évaluation LLM, RAG, SQL tool, routage agentique, observabilité</li>
-            <li><strong>Compétences mobilisées :</strong> audit, expérimentation, amélioration continue, architecture applicative</li>
-          </ul>
-          <p>
-            <a href="projects/projet-10-llm.html">Voir la fiche projet détaillée</a>
-          </p>
-        </article>
+    <section class="projects-page">
+      <div class="container">
+        <div class="projects-intro">
+          <article class="content-block">
+            <h2>Des projets conçus comme des démonstrations de méthode</h2>
+            <p>
+              Je ne présente pas ici uniquement des résultats techniques. Chaque projet est aussi
+              pensé comme une démonstration de démarche : partir d’un besoin, choisir une méthode,
+              construire une solution, en évaluer les effets et expliciter ses limites.
+            </p>
+          </article>
+        </div>
 
-        <article class="content-block">
-          <h2>Projet Agritech Answers — Application de prédiction de rendement et de recommandation de culture</h2>
-          <p>
-            Ce projet consiste à concevoir une application d’aide à la décision capable de prédire
-            le rendement d’une culture, d’estimer ses indicateurs économiques et de recommander
-            les cultures les plus intéressantes selon un contexte donné.
-          </p>
-          <p>
-            La solution combine plusieurs modèles de machine learning, une API FastAPI,
-            une interface Streamlit et une base SQLite modifiable pour les hypothèses économiques.
-            L’objectif n’est pas de produire une vérité agronomique absolue, mais un outil métier
-            permettant d’explorer des scénarios, de comparer des cultures et de tester différentes
-            hypothèses de prix et de coûts.
-          </p>
-          <ul class="inline-list">
-            <li><strong>Type :</strong> projet réalisé</li>
-            <li><strong>Axes travaillés :</strong> prédiction, recommandation, logique économique, API, industrialisation</li>
-            <li><strong>Compétences mobilisées :</strong> modélisation, aide à la décision, architecture data, déploiement</li>
-          </ul>
-          <p>
-            <a href="projects/projet-12-agritech.html">Voir la fiche projet détaillée</a>
-          </p>
-        </article>
+        <div class="projects-grid">
+          <article class="card project-card">
+            <div>
+              <div class="badge-row">
+                <span class="badge badge-done">Réalisé</span>
+                <span class="badge">LLM / RAG</span>
+              </div>
 
-        <article class="content-block">
-          <h2>Projet personnel — IA, réflexivité des pratiques et insertion professionnelle</h2>
-          <p>
-            À partir d’IODKIP, progiciel utilisé dans mon ancienne expérience chez Transfer,
-            je cadre un projet data visant à transformer un outil de saisie en outil d’analyse
-            des pratiques professionnelles.
-          </p>
-          <p>
-            La V1 est centrée sur un modèle de classification capable de repérer, à l’échelle
-            d’une équipe, les pratiques associées aux sorties en emploi durable validé (EDV).
-            Une seconde brique, envisagée plus tard, porterait sur la suggestion documentaire
-            via RAG/LLM pour soutenir la réflexion des formateurs et des chargés de mission.
-          </p>
-          <ul class="inline-list">
-            <li><strong>Type :</strong> projet de cadrage stratégique et technique</li>
-            <li><strong>Axes travaillés :</strong> audit de données, classification, explicabilité, suivi du drift, gouvernance IA</li>
-            <li><strong>Compétences mobilisées :</strong> analyse du besoin, modélisation, structuration de projet data, vision métier</li>
-          </ul>
-          <p>
-            <a href="projects/projet-perso-insertion-ia.html">Voir la fiche projet détaillée</a>
-          </p>
-        </article>
+              <div class="card-title-row">
+                <span class="icon-pill" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 6V3"/>
+                    <path d="M16.5 7.5 18.5 5.5"/>
+                    <path d="M18 12h3"/>
+                    <path d="M16.5 16.5 18.5 18.5"/>
+                    <path d="M12 18v3"/>
+                    <path d="M7.5 16.5 5.5 18.5"/>
+                    <path d="M6 12H3"/>
+                    <path d="M7.5 7.5 5.5 5.5"/>
+                    <rect x="7" y="7" width="10" height="10" rx="2"/>
+                  </svg>
+                </span>
+                <h2>Projet SportSee — Assistant hybride : évaluation et amélioration d’un système LLM</h2>
+              </div>
+
+              <p>
+                Ce projet part d’un prototype RAG initial et le fait évoluer vers un assistant
+                d’analyses sportives capable de traiter deux familles de questions :
+                des questions documentaires sur des contenus textuels et des questions
+                statistiques sur des données structurées.
+              </p>
+              <p>
+                Mon travail a consisté à mettre en place une démarche d’évaluation formelle,
+                puis à restructurer le système avec une architecture hybride RAG + SQL,
+                un agent PydanticAI et un socle minimal d’industrialisation.
+              </p>
+
+              <ul class="inline-list">
+                <li><strong>Type :</strong> projet réalisé</li>
+                <li><strong>Axes travaillés :</strong> évaluation LLM, RAG, SQL tool, routage agentique, observabilité</li>
+                <li><strong>Compétences mobilisées :</strong> audit, expérimentation, amélioration continue, architecture applicative</li>
+              </ul>
+            </div>
+
+            <div class="project-meta">Évaluation, architecture hybride, amélioration continue</div>
+            <p>
+              <a class="project-link" href="projects/projet-10-llm.html">
+                Voir la fiche projet détaillée
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14"/>
+                  <path d="m13 5 7 7-7 7"/>
+                </svg>
+              </a>
+            </p>
+          </article>
+
+          <article class="card project-card">
+            <div>
+              <div class="badge-row">
+                <span class="badge badge-done">Réalisé</span>
+                <span class="badge">Aide à la décision</span>
+              </div>
+
+              <div class="card-title-row">
+                <span class="icon-pill" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 20h10"/>
+                    <path d="M10 20c0-3 4-3 4 0"/>
+                    <path d="M6 17c-1.5-1.3-2.5-3.5-2.5-5.5A8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 8.5 8.5c0 2-1 4.2-2.5 5.5"/>
+                    <path d="M8 11c1 .8 2.2 1.2 4 1.2s3-.4 4-1.2"/>
+                  </svg>
+                </span>
+                <h2>Projet Agritech Answers — Prédiction de rendement et recommandation de culture</h2>
+              </div>
+
+              <p>
+                Ce projet consiste à concevoir une application d’aide à la décision capable
+                de prédire le rendement d’une culture, d’estimer ses indicateurs économiques
+                et de recommander les cultures les plus intéressantes selon un contexte donné.
+              </p>
+              <p>
+                La solution combine plusieurs modèles de machine learning, une API FastAPI,
+                une interface Streamlit et une base SQLite modifiable pour les hypothèses économiques.
+                L’objectif est de permettre l’exploration de scénarios et la comparaison de cultures.
+              </p>
+
+              <ul class="inline-list">
+                <li><strong>Type :</strong> projet réalisé</li>
+                <li><strong>Axes travaillés :</strong> prédiction, recommandation, logique économique, API, industrialisation</li>
+                <li><strong>Compétences mobilisées :</strong> modélisation, aide à la décision, architecture data, déploiement</li>
+              </ul>
+            </div>
+
+            <div class="project-meta">Prédiction, recommandation, architecture produit</div>
+            <p>
+              <a class="project-link" href="projects/projet-12-agritech.html">
+                Voir la fiche projet détaillée
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14"/>
+                  <path d="m13 5 7 7-7 7"/>
+                </svg>
+              </a>
+            </p>
+          </article>
+
+          <article class="card project-card">
+            <div>
+              <div class="badge-row">
+                <span class="badge badge-planning">Cadrage</span>
+                <span class="badge">Projet personnel</span>
+              </div>
+
+              <div class="card-title-row">
+                <span class="icon-pill" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="6" cy="6" r="2"/>
+                    <circle cx="18" cy="6" r="2"/>
+                    <circle cx="12" cy="18" r="2"/>
+                    <path d="M8 6h8"/>
+                    <path d="M7.7 7.3 10.3 14.7"/>
+                    <path d="M16.3 7.3 13.7 14.7"/>
+                  </svg>
+                </span>
+                <h2>Projet personnel — IA, réflexivité des pratiques et insertion professionnelle</h2>
+              </div>
+
+              <p>
+                À partir d’IODKIP, progiciel utilisé dans mon ancienne expérience chez Transfer,
+                je cadre un projet data visant à transformer un outil de saisie en outil d’analyse
+                des pratiques professionnelles.
+              </p>
+              <p>
+                La V1 est centrée sur un modèle de classification capable de repérer, à l’échelle
+                d’une équipe, les pratiques associées aux sorties en emploi durable validé (EDV).
+                Une seconde brique, envisagée plus tard, porterait sur la suggestion documentaire
+                via RAG/LLM.
+              </p>
+
+              <ul class="inline-list">
+                <li><strong>Type :</strong> projet de cadrage stratégique et technique</li>
+                <li><strong>Axes travaillés :</strong> audit de données, classification, explicabilité, suivi du drift, gouvernance IA</li>
+                <li><strong>Compétences mobilisées :</strong> analyse du besoin, modélisation, structuration de projet data, vision métier</li>
+              </ul>
+            </div>
+
+            <div class="project-meta">Cadrage, besoin métier, vision stratégique</div>
+            <p>
+              <a class="project-link" href="projects/projet-perso-insertion-ia.html">
+                Voir la fiche projet détaillée
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14"/>
+                  <path d="m13 5 7 7-7 7"/>
+                </svg>
+              </a>
+            </p>
+          </article>
+        </div>
       </div>
     </section>
   </main>

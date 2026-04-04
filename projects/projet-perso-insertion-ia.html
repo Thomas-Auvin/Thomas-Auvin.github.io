@@ -8,7 +8,78 @@
     name="description"
     content="Projet personnel de cadrage d’une solution IA pour l’analyse de pratiques professionnelles en insertion."
   />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <style>
+    .project-page {
+      padding-bottom: 4rem;
+    }
+
+    .icon-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #eff6ff 0%, #f8fbff 100%);
+      border: 1px solid #bfdbfe;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .icon-pill svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+    }
+
+    .block-title-row,
+    .aside-title-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .block-title-row h2,
+    .aside-title-row h3 {
+      margin: 0;
+    }
+
+    .project-note {
+      padding: 1rem 1.1rem;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #eff6ff 0%, #f8fbff 100%);
+      border: 1px solid #bfdbfe;
+      margin-top: 1rem;
+      color: var(--muted);
+    }
+
+    .project-note strong {
+      color: var(--accent);
+    }
+
+    @media (max-width: 640px) {
+      .block-title-row,
+      .aside-title-row {
+        gap: 0.7rem;
+      }
+
+      .icon-pill {
+        width: 38px;
+        height: 38px;
+      }
+
+      .icon-pill svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -40,11 +111,23 @@
       </div>
     </section>
 
-    <section class="page-content">
+    <section class="project-page">
       <div class="container content-grid">
         <div>
           <article class="content-block">
-            <h2>Le projet en bref</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="6" cy="6" r="2"/>
+                  <circle cx="18" cy="6" r="2"/>
+                  <circle cx="12" cy="18" r="2"/>
+                  <path d="M8 6h8"/>
+                  <path d="M7.7 7.3 10.3 14.7"/>
+                  <path d="M16.3 7.3 13.7 14.7"/>
+                </svg>
+              </span>
+              <h2>Le projet en bref</h2>
+            </div>
             <p>
               Ce projet prolonge directement mon travail de thèse et mon ancienne expérience
               autour d’IODKIP, un progiciel utilisé dans le champ de l’insertion professionnelle.
@@ -58,7 +141,18 @@
           </article>
 
           <article class="content-block">
-            <h2>La problématique</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 12h6"/>
+                  <path d="M15 12h6"/>
+                  <path d="M12 3v6"/>
+                  <path d="M12 15v6"/>
+                  <circle cx="12" cy="12" r="2.5"/>
+                </svg>
+              </span>
+              <h2>La problématique</h2>
+            </div>
             <p>
               IODKIP collecte déjà de nombreuses données sur les demandeurs d’emploi,
               les entreprises, les offres et les interactions menées par les équipes.
@@ -73,7 +167,19 @@
           </article>
 
           <article class="content-block">
-            <h2>La solution envisagée</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="6" rx="2"/>
+                  <rect x="3" y="14" width="18" height="6" rx="2"/>
+                  <path d="M7 7h.01"/>
+                  <path d="M7 17h.01"/>
+                  <path d="M11 7h6"/>
+                  <path d="M11 17h6"/>
+                </svg>
+              </span>
+              <h2>La solution envisagée</h2>
+            </div>
             <p>
               <strong>Brique 1 — prioritaire :</strong> construire un modèle de classification
               capable d’estimer la probabilité de sortie en emploi durable validé (EDV) à partir
@@ -91,10 +197,25 @@
               via RAG/LLM pour orienter les utilisateurs vers des ressources pertinentes du corpus
               Transfer, sans se substituer au formateur.
             </p>
+
+            <div class="project-note">
+              <strong>Logique du projet :</strong>
+              commencer par une V1 de lecture analytique et prédictive des pratiques,
+              puis ouvrir dans un second temps une couche documentaire au service de la réflexion.
+            </div>
           </article>
 
           <article class="content-block">
-            <h2>Ce que ce projet montre déjà</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 12h8"/>
+                  <path d="M12 8v8"/>
+                  <circle cx="12" cy="12" r="9"/>
+                </svg>
+              </span>
+              <h2>Ce que ce projet montre déjà</h2>
+            </div>
             <ul>
               <li>ma capacité à partir d’un besoin métier réel ;</li>
               <li>mon aptitude à auditer un existant complexe ;</li>
@@ -105,7 +226,15 @@
           </article>
 
           <article class="content-block">
-            <h2>Compétences déjà mobilisables</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z"/>
+                  <path d="M4 20a8 8 0 0 1 16 0"/>
+                </svg>
+              </span>
+              <h2>Compétences déjà mobilisables</h2>
+            </div>
             <ul>
               <li>analyse du besoin et compréhension fine du terrain IOD ;</li>
               <li>conduite de projet et formalisation d’un cadrage ;</li>
@@ -117,7 +246,15 @@
           </article>
 
           <article class="content-block">
-            <h2>Compétences à renforcer pour le réaliser</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20V4"/>
+                  <path d="m6 10 6-6 6 6"/>
+                </svg>
+              </span>
+              <h2>Compétences à renforcer pour le réaliser</h2>
+            </div>
             <ul>
               <li>ingénierie de données relationnelles et temporelles complexes ;</li>
               <li>anonymisation avancée et gouvernance RGPD by design ;</li>
@@ -129,7 +266,17 @@
           </article>
 
           <article class="content-block">
-            <h2>Statut du projet</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>
+                  <path d="M14 2v6h6"/>
+                  <path d="M8 13h8"/>
+                  <path d="M8 17h5"/>
+                </svg>
+              </span>
+              <h2>Statut du projet</h2>
+            </div>
             <p>
               Il s’agit d’un projet de cadrage stratégique et technique. Le système n’est
               pas encore développé, mais le besoin, les acteurs, les risques, la feuille
@@ -149,7 +296,15 @@
 
         <aside>
           <div class="aside-box">
-            <h3>En 2 minutes</h3>
+            <div class="aside-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="13" r="8"/>
+                  <path d="M12 9v4l2.5 2.5"/>
+                </svg>
+              </span>
+              <h3>En 2 minutes</h3>
+            </div>
             <ul>
               <li>un besoin réel ;</li>
               <li>une base métier déjà existante ;</li>
@@ -160,7 +315,17 @@
           </div>
 
           <div class="aside-box">
-            <h3>Livrables visés</h3>
+            <div class="aside-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>
+                  <path d="M14 2v6h6"/>
+                  <path d="M8 13h8"/>
+                  <path d="M8 17h5"/>
+                </svg>
+              </span>
+              <h3>Livrables visés</h3>
+            </div>
             <ul>
               <li>audit des données IODKIP ;</li>
               <li>design analytique des parcours ;</li>

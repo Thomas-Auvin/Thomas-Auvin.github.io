@@ -8,7 +8,78 @@
     name="description"
     content="Réflexivité de Thomas Auvin : évolution de sa compréhension du métier de Data Scientist, apprentissages et axes de progression."
   />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .reflexivite-page {
+      padding-bottom: 4rem;
+    }
+
+    .icon-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #eff6ff 0%, #f8fbff 100%);
+      border: 1px solid #bfdbfe;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .icon-pill svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+    }
+
+    .block-title-row,
+    .aside-title-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .block-title-row h2,
+    .aside-title-row h3 {
+      margin: 0;
+    }
+
+    .reflexive-note {
+      padding: 1rem 1.1rem;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #eff6ff 0%, #f8fbff 100%);
+      border: 1px solid #bfdbfe;
+      margin-top: 1rem;
+      color: var(--muted);
+    }
+
+    .reflexive-note strong {
+      color: var(--accent);
+    }
+
+    @media (max-width: 640px) {
+      .block-title-row,
+      .aside-title-row {
+        gap: 0.7rem;
+      }
+
+      .icon-pill {
+        width: 38px;
+        height: 38px;
+      }
+
+      .icon-pill svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -31,86 +102,162 @@
       <div class="container">
         <div class="hero-card">
           <div class="eyebrow">Réflexivité</div>
-          <h1 class="page-title">Prendre du recul sur mon parcours,mes projets et ma pratique</h1>
+          <h1 class="page-title">Prendre du recul sur mon parcours, mes projets et ma pratique</h1>
           <p class="lead">
-            Cette partie présente propose une réflexion sur ce qui a fait mon parcours, ce que mes projets m’ont appris, 
-            et une projection sur mon avenir professionnel : ce que je souhaite mettre en place pour continuer mon appentissage, 
-            les axes que je souhaite approfondir et le chemin que je souhaite suivre.
+            Cette page propose une réflexion sur ce qui a structuré mon parcours,
+            sur ce que mes projets m’ont appris, et sur la manière dont je souhaite
+            poursuivre mon développement professionnel dans les années à venir.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="page-content">
+    <section class="reflexivite-page">
       <div class="container content-grid">
         <div>
           <article class="content-block">
-            <h2>D'où je viens</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 6V3"/>
+                  <path d="M16.5 7.5 18.5 5.5"/>
+                  <path d="M18 12h3"/>
+                  <path d="M16.5 16.5 18.5 18.5"/>
+                  <path d="M12 18v3"/>
+                  <path d="M7.5 16.5 5.5 18.5"/>
+                  <path d="M6 12H3"/>
+                  <path d="M7.5 7.5 5.5 5.5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                </svg>
+              </span>
+              <h2>D’où je viens</h2>
+            </div>
+
             <p>
-              Je suis issus d’une formation en sciences sociales, 
-              avec une expérience professionnelle dans le champ de l’insertion professionnelle.
-              Lors de ma thèse, j'ai appris à conduire une recherche de terrain et à me saisir des données 
-              pour faire une analyse approfondi d'un sujet.
+              Je viens d’une formation en sciences sociales, avec une expérience professionnelle
+              dans le champ de l’insertion professionnelle. Lors de ma thèse, j’ai appris
+              à conduire une recherche de terrain, à construire un problème d’analyse,
+              et à me saisir des données pour produire une lecture approfondie d’un sujet.
+            </p>
             <p>
-              Cependant, je n’avais pas de formation technique formelle, 
-              et j’ai dû apprendre sur le tas des compétences techniques nécessaires pour mener à bien mes projets data.
-              J'ai connu alors un mélange de satisfaction dans la réalisation d'un projet d'envergure
-              et de frustration avec un sentiment de ne pas avoir assez approfondi des possibilités techniques.
+              En revanche, je ne disposais pas d’une formation technique formelle en data.
+              J’ai donc appris progressivement, souvent de manière autonome, certaines compétences
+              techniques nécessaires pour mener à bien mes projets. Cette période a mêlé
+              satisfaction intellectuelle et frustration technique : j’avais l’impression
+              d’aller loin dans la réflexion, tout en restant parfois limité dans les moyens.
+            </p>
             <p>
-              C'est donc assez naturellement que je me suis orienté vers une formation en data science, 
-              pour me permettre d'appronfondir encore plus mon champ de compétences.
+              C’est dans ce contexte que la formation en data science s’est imposée
+              comme une suite logique : non pas un changement complet de trajectoire,
+              mais un approfondissement structuré de mes capacités d’analyse et d’action.
+            </p>
           </article>
 
           <article class="content-block">
-            <h2>Où je suis</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 12h6"/>
+                  <path d="M15 12h6"/>
+                  <path d="M12 3v6"/>
+                  <path d="M12 15v6"/>
+                  <circle cx="12" cy="12" r="2.5"/>
+                </svg>
+              </span>
+              <h2>Où je suis</h2>
+            </div>
+
             <p>
-              L'ors de cette formation, j'ai beaucoup appris. J'ai commencé par apprendre une nouvelle langue (python).
-              J'ai ensuite appris à structurer une démarche de projet data, à faire des choix techniques,
-              à évaluer des solutions, à documenter une démarche et à expliciter les limites des solutions proposées.
-              J'ai aussi appris à mieux comprendre les enjeux liés aux données, à l'industrialisation et à l'adoption des solutions proposées.
+              Au cours de cette formation, j’ai acquis bien davantage que des outils.
+              J’ai appris une nouvelle langue technique avec Python, mais aussi une manière
+              plus structurée d’aborder un projet data : cadrer un besoin, choisir une méthode,
+              justifier des décisions, documenter une démarche, évaluer une solution
+              et expliciter ses limites.
             </p>
             <p>
-              Aujourd'hui, j'ai donc une nouvelle vision sur le métier de data scientist. 
-              Il s'ouvre à moi un horizon de possibilités qui me semble infini.
-              Les idées de projets pour ma pratique professionnelle bouillonnent dans ma tête, et j'ai hâte de pouvoir les concrétiser.
+              J’ai également mieux compris les enjeux liés à la qualité des données,
+              à l’industrialisation, à l’observabilité, au déploiement et à l’adoption réelle
+              des solutions proposées. Cette évolution a changé ma représentation du métier :
+              je ne vois plus la data science comme une simple pratique de modélisation,
+              mais comme une activité articulant technique, méthode, usage et restitution.
+            </p>
 
+            <div class="reflexive-note">
+              <strong>Ce que j’ai gagné :</strong>
+              une vision plus large du métier, dans laquelle la qualité d’un projet
+              dépend autant de son cadrage, de sa lisibilité et de son utilité
+              que de sa seule performance technique.
+            </div>
+          </article>
+
+          <article class="content-block">
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 19 19 5"/>
+                  <path d="M7 5h12v12"/>
+                </svg>
+              </span>
+              <h2>Où je vais</h2>
+            </div>
+
+            <p>
+              Je considère néanmoins que cet apprentissage ne fait que commencer.
+              La prochaine étape est simple dans son principe : pratiquer encore et davantage.
+              Pour consolider durablement mes compétences, je dois continuer à travailler
+              sur des projets concrets, variés et exigeants.
+            </p>
+            <p>
+              Cela me permettra d’approfondir plusieurs dimensions encore en progression,
+              notamment la maîtrise des bases de données SQL, le travail sur les architectures
+              plus complexes, ou encore certains enjeux d’industrialisation.
+              Je souhaite continuer à revenir sur certains blocs de ma formation
+              pour consolider ce qui a parfois été découvert rapidement.
+            </p>
+            <p>
+              À plus long terme, je veux mobiliser ces compétences sur des projets
+              ayant une vraie utilité organisationnelle. Je pense notamment au projet
+              personnel autour du progiciel IODKIP dans le champ de l’insertion professionnelle,
+              qui représente pour moi une articulation forte entre terrain, méthode,
+              données et intelligence artificielle.
             </p>
           </article>
 
           <article class="content-block">
-            <h2>Où je vais</h2>
-            <p>
-              Cependant, c'est loin d'être la fin de mon apprentissage. Je suis conscient de ce qu'il me reste à faire. 
-              Le première démarche qu'il me faut adopter ce résume en une idée simple : PRATIQUER, PRATIQUER, PRATIQUER.
-              Si je veux espérer mettre en oeuvre mes connaissances au service de projets d'envergure, il me faut appliquer sur du concret. 
-            </p>
-            <p>
-              Cette posture me permettra d'approfondir des compétences qu'il me reste à maitriser. Par exemple, ma connaissance des 
-              bases de données SQL reste à parfaire. Je vais d'ailleurs continuer de reprendre des cours ou des projets réalisés dans ma formation
-              afin de mieux maitriser ce qui aurait été vu trop rapidement ou pas assez en profondeur.
-            </p>
-            <p>
-              Par ailleurs, l'avenir s'annonce aussi motivant que challengeant. J'aimerai aider une structure d'architecte dans la mise en place
-              d'une démarche d'Océrisation et de recommandation de documents, ainsi que de d'aide à la décision. 
-              Je souhaite bien entendu me former grace à un grand nombre de projets, mais je souhaites particulièrement réaliser le projet
-              personnel présenté sur le progiciel IODKIP dans le champ de l'insertion professionnelle.
-              Ce projet me tiens particulièrement à cœur car son utilité professionnelle concrete serait l'aboutissement parfait 
-              pour marquer l'acquisition de mes nouvelles compétences techniques, méthodologiques et analytiques.
-            <p>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 12h8"/>
+                  <path d="M12 8v8"/>
+                  <circle cx="12" cy="12" r="9"/>
+                </svg>
+              </span>
+              <h2>En résumé</h2>
+            </div>
 
-          </article>
-
-          <article class="content-block">
-            <h2>En résumé</h2>
             <p>
-              Vivement la suite
+              Mon parcours me conduit aujourd’hui vers une pratique de la data science
+              qui ne sépare pas la technique de la réflexion. Je veux continuer à développer
+              des solutions utiles, évaluables, discutables et réellement ancrées
+              dans les contextes où elles prennent place.
             </p>
           </article>
         </div>
 
         <aside>
           <div class="aside-box">
-            <h3>Points clés</h3>
+            <div class="aside-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 7h8"/>
+                  <path d="M8 12h8"/>
+                  <path d="M8 17h5"/>
+                  <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/>
+                </svg>
+              </span>
+              <h3>Points clés</h3>
+            </div>
+
             <ul class="inline-list">
               <li>importance du cadrage ;</li>
               <li>nécessité d’une évaluation rigoureuse ;</li>
@@ -121,7 +268,17 @@
           </div>
 
           <div class="aside-box">
-            <h3>Vision du métier</h3>
+            <div class="aside-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20"/>
+                  <path d="M2 12h20"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </span>
+              <h3>Vision du métier</h3>
+            </div>
+
             <p>
               Je vois aujourd’hui la data science comme une pratique située,
               qui articule compréhension du problème, méthode, technique,

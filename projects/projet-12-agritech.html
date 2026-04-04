@@ -6,9 +6,80 @@
   <title>Projet Agritech Answers — Agriculture optimisée par les données</title>
   <meta
     name="description"
-    content="Projet 12 : système de recommandation pour une agriculture optimisée par les données."
+    content="Projet 12 : système de prédiction de rendement et de recommandation de culture pour une agriculture optimisée par les données."
   />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <style>
+    .project-page {
+      padding-bottom: 4rem;
+    }
+
+    .icon-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #eff6ff 0%, #f8fbff 100%);
+      border: 1px solid #bfdbfe;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .icon-pill svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+    }
+
+    .block-title-row,
+    .aside-title-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .block-title-row h2,
+    .aside-title-row h3 {
+      margin: 0;
+    }
+
+    .project-note {
+      padding: 1rem 1.1rem;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #eff6ff 0%, #f8fbff 100%);
+      border: 1px solid #bfdbfe;
+      margin-top: 1rem;
+      color: var(--muted);
+    }
+
+    .project-note strong {
+      color: var(--accent);
+    }
+
+    @media (max-width: 640px) {
+      .block-title-row,
+      .aside-title-row {
+        gap: 0.7rem;
+      }
+
+      .icon-pill {
+        width: 38px;
+        height: 38px;
+      }
+
+      .icon-pill svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -30,7 +101,7 @@
     <section class="page-hero">
       <div class="container">
         <div class="hero-card">
-          <div class="eyebrow">Projet Agritech Answers</div>
+          <div class="eyebrow">Projet 12</div>
           <h1 class="page-title">Application agritech de prédiction de rendement et de recommandation de culture</h1>
           <p class="lead">
             Un prototype métier d’aide à la décision qui combine prédiction agronomique,
@@ -40,11 +111,21 @@
       </div>
     </section>
 
-    <section class="page-content">
+    <section class="project-page">
       <div class="container content-grid">
         <div>
           <article class="content-block">
-            <h2>Le projet en bref</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 20h10"/>
+                  <path d="M10 20c0-3 4-3 4 0"/>
+                  <path d="M6 17c-1.5-1.3-2.5-3.5-2.5-5.5A8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 8.5 8.5c0 2-1 4.2-2.5 5.5"/>
+                  <path d="M8 11c1 .8 2.2 1.2 4 1.2s3-.4 4-1.2"/>
+                </svg>
+              </span>
+              <h2>Le projet en bref</h2>
+            </div>
             <p>
               Ce projet consiste à développer une application agritech capable de prédire
               le rendement d’une culture et de recommander les cultures les plus intéressantes
@@ -58,7 +139,18 @@
           </article>
 
           <article class="content-block">
-            <h2>Le besoin métier</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 12h6"/>
+                  <path d="M15 12h6"/>
+                  <path d="M12 3v6"/>
+                  <path d="M12 15v6"/>
+                  <circle cx="12" cy="12" r="2.5"/>
+                </svg>
+              </span>
+              <h2>Le besoin métier</h2>
+            </div>
             <p>
               Dans un contexte agricole, un rendement élevé ne suffit pas à guider une décision.
               Une culture productive peut rester peu intéressante si son prix est faible,
@@ -73,7 +165,19 @@
           </article>
 
           <article class="content-block">
-            <h2>La logique analytique retenue</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="6" rx="2"/>
+                  <rect x="3" y="14" width="18" height="6" rx="2"/>
+                  <path d="M7 7h.01"/>
+                  <path d="M7 17h.01"/>
+                  <path d="M11 7h6"/>
+                  <path d="M11 17h6"/>
+                </svg>
+              </span>
+              <h2>La logique analytique retenue</h2>
+            </div>
             <p>
               Le projet s’appuie sur deux ensembles de données complémentaires et sur une
               architecture multi-modèles. L’exploration a montré que le dataset principal
@@ -87,10 +191,24 @@
               un modèle général de repli, et un modèle secondaire de recommandation
               plus adapté à certains cas couverts par le dataset annexe.
             </p>
+
+            <div class="project-note">
+              <strong>Choix clé :</strong>
+              arbitrer entre performance statistique, différenciation réelle entre cultures
+              et capacité à produire une recommandation exploitable dans un contexte métier.
+            </div>
           </article>
 
           <article class="content-block">
-            <h2>Ce que l’application permet</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20V4"/>
+                  <path d="m6 10 6-6 6 6"/>
+                </svg>
+              </span>
+              <h2>Ce que l’application permet</h2>
+            </div>
             <ul>
               <li>prédire le rendement d’une culture à l’hectare et à l’échelle d’une parcelle ;</li>
               <li>fournir une marge d’erreur et des bornes basses / hautes ;</li>
@@ -102,7 +220,19 @@
           </article>
 
           <article class="content-block">
-            <h2>Architecture de la solution</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="6" rx="2"/>
+                  <rect x="3" y="14" width="18" height="6" rx="2"/>
+                  <path d="M7 7h.01"/>
+                  <path d="M7 17h.01"/>
+                  <path d="M11 7h6"/>
+                  <path d="M11 17h6"/>
+                </svg>
+              </span>
+              <h2>Architecture de la solution</h2>
+            </div>
             <p>
               Le projet repose sur une séparation claire entre interface, API, artefacts,
               services métier et couche économique.
@@ -117,7 +247,16 @@
           </article>
 
           <article class="content-block">
-            <h2>Ce que ce projet montre</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 12h8"/>
+                  <path d="M12 8v8"/>
+                  <circle cx="12" cy="12" r="9"/>
+                </svg>
+              </span>
+              <h2>Ce que ce projet montre</h2>
+            </div>
             <ul>
               <li>ma capacité à partir d’un besoin métier concret ;</li>
               <li>ma capacité à consolider plusieurs sources de données ;</li>
@@ -128,7 +267,15 @@
           </article>
 
           <article class="content-block">
-            <h2>Compétences déjà mobilisées</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z"/>
+                  <path d="M4 20a8 8 0 0 1 16 0"/>
+                </svg>
+              </span>
+              <h2>Compétences déjà mobilisées</h2>
+            </div>
             <ul>
               <li>exploration et nettoyage de données hétérogènes ;</li>
               <li>benchmark de modèles de régression ;</li>
@@ -142,7 +289,15 @@
           </article>
 
           <article class="content-block">
-            <h2>Compétences que ce projet m’a permis de renforcer</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20V4"/>
+                  <path d="m6 10 6-6 6 6"/>
+                </svg>
+              </span>
+              <h2>Compétences que ce projet m’a permis de renforcer</h2>
+            </div>
             <ul>
               <li>conception d’une architecture multi-modèles ;</li>
               <li>routage métier entre plusieurs niveaux de couverture de données ;</li>
@@ -153,7 +308,16 @@
           </article>
 
           <article class="content-block">
-            <h2>Limites assumées de la V1</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 9v4"/>
+                  <path d="M12 17h.01"/>
+                  <circle cx="12" cy="12" r="9"/>
+                </svg>
+              </span>
+              <h2>Limites assumées de la V1</h2>
+            </div>
             <p>
               La V1 reste un prototype métier. La couche économique est volontairement simplifiée
               et dépend directement des prix et coûts actifs saisis dans SQLite. Les niveaux de
@@ -164,7 +328,17 @@
           </article>
 
           <article class="content-block">
-            <h2>Statut du projet</h2>
+            <div class="block-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>
+                  <path d="M14 2v6h6"/>
+                  <path d="M8 13h8"/>
+                  <path d="M8 17h5"/>
+                </svg>
+              </span>
+              <h2>Statut du projet</h2>
+            </div>
             <p>
               Le projet est réalisé sous la forme d’un prototype cohérent de prédiction et
               de recommandation, avec interface, API, logique économique et socle
@@ -180,7 +354,15 @@
 
         <aside>
           <div class="aside-box">
-            <h3>En 2 minutes</h3>
+            <div class="aside-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="13" r="8"/>
+                  <path d="M12 9v4l2.5 2.5"/>
+                </svg>
+              </span>
+              <h3>En 2 minutes</h3>
+            </div>
             <ul>
               <li>prédire un rendement ;</li>
               <li>estimer une marge brute ;</li>
@@ -191,7 +373,19 @@
           </div>
 
           <div class="aside-box">
-            <h3>Technologies</h3>
+            <div class="aside-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="6" rx="2"/>
+                  <rect x="3" y="14" width="18" height="6" rx="2"/>
+                  <path d="M7 7h.01"/>
+                  <path d="M7 17h.01"/>
+                  <path d="M11 7h6"/>
+                  <path d="M11 17h6"/>
+                </svg>
+              </span>
+              <h3>Technologies</h3>
+            </div>
             <ul>
               <li>Python</li>
               <li>FastAPI</li>
@@ -204,7 +398,17 @@
           </div>
 
           <div class="aside-box">
-            <h3>Livrables clés</h3>
+            <div class="aside-title-row">
+              <span class="icon-pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>
+                  <path d="M14 2v6h6"/>
+                  <path d="M8 13h8"/>
+                  <path d="M8 17h5"/>
+                </svg>
+              </span>
+              <h3>Livrables clés</h3>
+            </div>
             <ul>
               <li>modèles entraînés ;</li>
               <li>API /predict et /recommend ;</li>
