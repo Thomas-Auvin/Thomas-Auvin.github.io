@@ -73,6 +73,17 @@ button:focus-visible {
 }
 
 /* =========================
+   JUSTIFICATION DES TEXTES
+   ========================= */
+
+p,
+li {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+/* =========================
    HEADER / NAV
    ========================= */
 
@@ -390,7 +401,7 @@ button:focus-visible {
 
 .hero-highlight,
 .about-callout,
-reflexive-note,
+.reflexive-note,
 .project-note,
 .research-note {
   margin-top: 1.4rem;
