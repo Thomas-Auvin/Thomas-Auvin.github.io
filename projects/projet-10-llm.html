@@ -31,10 +31,10 @@
       <div class="container">
         <div class="hero-card">
           <div class="eyebrow">Projet 10</div>
-          <h1 class="page-title">Évaluation et amélioration des performances d’un système LLM</h1>
+          <h1 class="page-title">Assistant NBA hybride : évaluation et amélioration d’un système LLM</h1>
           <p class="lead">
-            Projet réalisé autour de l’audit, de l’évaluation et de l’amélioration
-            d’un système d’intelligence artificielle conversationnelle.
+            Un projet centré sur l’évaluation raisonnée, l’architecture hybride RAG + SQL
+            et l’amélioration mesurable d’un assistant d’analyses sportives.
           </p>
         </div>
       </div>
@@ -44,65 +44,214 @@
       <div class="container content-grid">
         <div>
           <article class="content-block">
-            <h2>Contexte</h2>
+            <h2>Le projet en bref</h2>
             <p>
-              Ce projet s’inscrit dans un travail d’analyse et d’amélioration
-              d’un assistant IA combinant recherche documentaire et interrogation
-              de données structurées.
+              Ce projet vise à concevoir, analyser, améliorer et évaluer un assistant NBA
+              capable de répondre à des questions de nature différente :
+              questions documentaires fondées sur des contenus textuels,
+              et questions statistiques fondées sur des données tabulaires structurées.
+            </p>
+            <p>
+              L’enjeu principal n’était pas seulement de produire une application fonctionnelle,
+              mais de construire un système plus robuste, traçable et mesurable qu’un simple
+              chatbot génératif.
             </p>
           </article>
 
           <article class="content-block">
-            <h2>Objectif</h2>
+            <h2>La problématique</h2>
             <p>
-              L’objectif était de mesurer la qualité réelle du système,
-              d’identifier ses limites et de proposer des améliorations ciblées
-              à partir d’une démarche d’évaluation rigoureuse.
+              Une architecture RAG classique fonctionne relativement bien pour retrouver
+              et synthétiser des contenus narratifs. En revanche, elle devient vite fragile
+              lorsqu’une question nécessite un tri, une comparaison, un classement,
+              un filtrage ou une agrégation précise sur des données tabulaires.
+            </p>
+            <p>
+              La problématique du projet a donc été la suivante :
+              comment construire un assistant LLM capable de répondre à la fois
+              à des questions documentaires et à des questions statistiques,
+              tout en gardant un niveau minimal de robustesse, de traçabilité
+              et d’évaluabilité ?
             </p>
           </article>
 
           <article class="content-block">
-            <h2>Approche</h2>
+            <h2>La démarche retenue</h2>
             <p>
-              La démarche a articulé audit du système existant, définition de métriques,
-              expérimentation, comparaison de versions et amélioration continue.
+              J’ai volontairement adopté une logique progressive :
+              partir d’un système RAG initial, mettre en place une évaluation formelle,
+              diagnostiquer les limites, puis faire évoluer l’architecture à partir
+              de ce diagnostic.
+            </p>
+            <p>
+              Le projet suit donc une vraie chaîne d’amélioration continue :
+              baseline → analyse → amélioration → réévaluation.
             </p>
           </article>
 
           <article class="content-block">
-            <h2>Résultats</h2>
-            <p>
-              Le projet a permis d’objectiver les performances du système,
-              de comparer plusieurs états successifs et de mieux relier les choix techniques
-              aux objectifs d’usage.
-            </p>
-          </article>
-
-          <article class="content-block">
-            <h2>Compétences mobilisées</h2>
-            <ul class="inline-list">
-              <li>évaluation de systèmes LLM / RAG ;</li>
-              <li>analyse critique ;</li>
-              <li>métriques et expérimentation ;</li>
-              <li>audit technique ;</li>
-              <li>restitution et documentation.</li>
+            <h2>Architecture finale</h2>
+            <ul>
+              <li><strong>Streamlit</strong> pour l’interface utilisateur ;</li>
+              <li><strong>Mistral + FAISS</strong> pour la branche RAG documentaire ;</li>
+              <li><strong>SQLite</strong> pour les statistiques NBA structurées ;</li>
+              <li><strong>Pydantic + PydanticAI</strong> pour structurer les données et centraliser le routage ;</li>
+              <li><strong>SQL tool</strong> pour interroger les tables de manière contrôlée ;</li>
+              <li><strong>RAGAS</strong> pour l’évaluation ;</li>
+              <li><strong>Logfire + Docker + GitHub Actions</strong> pour l’observabilité et l’industrialisation minimale.</li>
             </ul>
+          </article>
+
+          <article class="content-block">
+            <h2>Pourquoi le système a évolué</h2>
+            <p>
+              La V1 traitait presque toutes les questions selon une logique linéaire
+              retrieval → génération, en ramenant même les statistiques tabulaires à du texte.
+              Cela rendait difficile l’analyse des erreurs et fragilisait les réponses
+              sur les questions numériques ou comparatives.
+            </p>
+            <p>
+              L’introduction de PydanticAI et du SQL tool a permis de passer d’un pipeline fixe
+              à un agent outillé capable de choisir dynamiquement le bon traitement
+              selon le type de question.
+            </p>
+          </article>
+
+          <article class="content-block">
+            <h2>Ce que j’ai amélioré</h2>
+            <ul>
+              <li>mise en place d’un runner d’évaluation formelle ;</li>
+              <li>ajout de métriques RAGAS et de métriques de retrieval ;</li>
+              <li>formalisation des objets de données avec Pydantic ;</li>
+              <li>introduction d’un agent PydanticAI ;</li>
+              <li>ingestion de l’Excel NBA dans une base SQLite ;</li>
+              <li>création d’un SQL tool avec garde-fous et refus hors périmètre ;</li>
+              <li>amélioration du retrieval documentaire via réécriture de requêtes, reranking et chunking différencié ;</li>
+              <li>réévaluation complète du système final.</li>
+            </ul>
+          </article>
+
+          <article class="content-block">
+            <h2>Résultats marquants</h2>
+            <p>
+              Le projet a permis d’obtenir une amélioration très nette sur les métriques
+              de génération les plus importantes.
+            </p>
+            <ul>
+              <li><strong>Faithfulness :</strong> 0.530 → 0.954</li>
+              <li><strong>Answer relevancy :</strong> 0.519 → 0.817</li>
+              <li><strong>Tool routing OK :</strong> 0.956 sur le système hybride</li>
+              <li><strong>Tool call F1 :</strong> 0.985</li>
+            </ul>
+            <p>
+              Les gains les plus nets concernent les questions numériques,
+              désormais traitées à partir de données vérifiables via SQL
+              plutôt qu’à partir d’une simple similarité textuelle.
+            </p>
+          </article>
+
+          <article class="content-block">
+            <h2>Ce que ce projet montre</h2>
+            <ul>
+              <li>ma capacité à auditer un système LLM existant ;</li>
+              <li>ma capacité à distinguer les causes d’erreur au lieu de corriger “à l’intuition” ;</li>
+              <li>ma capacité à concevoir une architecture hybride adaptée à différents types de données ;</li>
+              <li>ma capacité à relier amélioration technique et évaluation mesurable ;</li>
+              <li>ma capacité à aller jusqu’à l’industrialisation minimale d’un prototype IA.</li>
+            </ul>
+          </article>
+
+          <article class="content-block">
+            <h2>Compétences déjà mobilisées</h2>
+            <ul>
+              <li>évaluation de systèmes LLM ;</li>
+              <li>construction et amélioration d’un pipeline RAG ;</li>
+              <li>structuration de données avec Pydantic ;</li>
+              <li>orchestration agentique avec PydanticAI ;</li>
+              <li>conception d’un SQL tool avec garde-fous ;</li>
+              <li>analyse de métriques et lecture critique des résultats ;</li>
+              <li>dockerisation, observabilité et CI minimale.</li>
+            </ul>
+          </article>
+
+          <article class="content-block">
+            <h2>Compétences que ce projet m’a permis de renforcer</h2>
+            <ul>
+              <li>évaluation fine d’un système hybride RAG + SQL ;</li>
+              <li>conception de jeux de questions et lecture par catégorie d’usage ;</li>
+              <li>routage entre plusieurs outils selon le type de question ;</li>
+              <li>gestion des cas hors périmètre et des refus utiles ;</li>
+              <li>articulation entre preuve documentaire, preuve SQL et génération finale.</li>
+            </ul>
+          </article>
+
+          <article class="content-block">
+            <h2>Limites assumées</h2>
+            <p>
+              Le projet reste dépendant de la qualité du dataset d’évaluation,
+              du périmètre réel de la base locale et de certaines dépendances externes
+              comme l’API Mistral pour certains tests d’intégration.
+            </p>
+            <p>
+              Les questions hybrides ou ambiguës restent aussi les plus difficiles,
+              notamment lorsqu’elles mobilisent à la fois une dimension statistique
+              et une dimension argumentative.
+            </p>
+          </article>
+
+          <article class="content-block">
+            <h2>Statut du projet</h2>
+            <p>
+              Le projet est réalisé sous la forme d’un assistant hybride fonctionnel,
+              évalué, amélioré puis réévalué, avec une logique d’industrialisation minimale.
+            </p>
+            <p>
+              <a href="../assets/docs/Auvin_Thomas_1_Rapport_mise_en_place_evaluation_032026.pdf" target="_blank" rel="noopener">
+                Consulter le rapport complet (PDF)
+              </a>
+            </p>
           </article>
         </div>
 
         <aside>
           <div class="aside-box">
-            <h3>Statut</h3>
-            <p>Projet réalisé</p>
+            <h3>En 2 minutes</h3>
+            <ul>
+              <li>un prototype RAG initial ;</li>
+              <li>une vraie démarche d’évaluation ;</li>
+              <li>une architecture hybride RAG + SQL ;</li>
+              <li>un agent PydanticAI ;</li>
+              <li>des gains mesurés sur la qualité des réponses.</li>
+            </ul>
           </div>
 
           <div class="aside-box">
-            <h3>Liens à ajouter</h3>
-            <ul class="inline-list">
-              <li>repo GitHub ;</li>
-              <li>README ;</li>
-              <li>captures d’écran ;</li>
-              <li>éventuels résultats d’évaluation.</li>
+            <h3>Technologies</h3>
+            <ul>
+              <li>Python 3.13</li>
+              <li>Streamlit</li>
+              <li>Pydantic / PydanticAI</li>
+              <li>Mistral AI</li>
+              <li>FAISS</li>
+              <li>SQLite</li>
+              <li>RAGAS</li>
+              <li>Logfire</li>
+              <li>Docker / Docker Compose</li>
+              <li>GitHub Actions</li>
+              <li>uv</li>
+              <li>Ruff</li>
+            </ul>
+          </div>
+
+          <div class="aside-box">
+            <h3>Livrables clés</h3>
+            <ul>
+              <li>assistant Streamlit ;</li>
+              <li>pipeline RAG amélioré ;</li>
+              <li>SQL tool sécurisé ;</li>
+              <li>runner d’évaluation ;</li>
+              <li>analyse des runs ;</li>
+              <li>dockerisation et observabilité.</li>
             </ul>
           </div>
         </aside>

@@ -31,10 +31,10 @@
       <div class="container">
         <div class="hero-card">
           <div class="eyebrow">Projet 12</div>
-          <h1 class="page-title">Système de recommandation pour une agriculture optimisée par les données</h1>
+          <h1 class="page-title">Application agritech de prédiction de rendement et de recommandation de culture</h1>
           <p class="lead">
-            Projet en cours visant à concevoir une solution d’aide à la décision
-            à partir de données agricoles.
+            Un prototype métier d’aide à la décision qui combine prédiction agronomique,
+            recommandation multi-cultures et lecture économique paramétrable.
           </p>
         </div>
       </div>
@@ -44,65 +44,174 @@
       <div class="container content-grid">
         <div>
           <article class="content-block">
-            <h2>Contexte</h2>
+            <h2>Le projet en bref</h2>
             <p>
-              Ce projet s’inscrit dans une logique d’optimisation de décisions
-              agricoles à partir des données, avec un enjeu fort d’utilité métier.
+              Ce projet consiste à développer une application agritech capable de prédire
+              le rendement d’une culture et de recommander les cultures les plus intéressantes
+              dans un contexte donné.
+            </p>
+            <p>
+              La valeur métier ne repose pas sur une simple estimation agronomique :
+              les prédictions sont enrichies d’une couche économique qui permet d’estimer
+              le revenu, les coûts variables et la marge brute afin de comparer plusieurs scénarios.
             </p>
           </article>
 
           <article class="content-block">
-            <h2>Objectif</h2>
+            <h2>Le besoin métier</h2>
             <p>
-              L’objectif est de construire une solution capable de recommander
-              des choix plus pertinents selon les situations, à partir de données disponibles
-              et d’une logique d’aide à la décision.
+              Dans un contexte agricole, un rendement élevé ne suffit pas à guider une décision.
+              Une culture productive peut rester peu intéressante si son prix est faible,
+              si ses coûts sont élevés ou si les hypothèses climatiques sont défavorables.
+            </p>
+            <p>
+              L’objectif du projet est donc de croiser lecture agronomique et lecture économique
+              pour proposer une aide à la décision plus proche d’un usage métier réel :
+              quelle culture semble la plus intéressante pour une parcelle donnée, non seulement
+              en rendement, mais aussi en marge brute potentielle ?
             </p>
           </article>
 
           <article class="content-block">
-            <h2>Approche</h2>
+            <h2>La logique analytique retenue</h2>
             <p>
-              Le projet combinera analyse de données, modélisation, recommandation
-              et structuration de livrables exploitables dans un cadre professionnel.
+              Le projet s’appuie sur deux ensembles de données complémentaires et sur une
+              architecture multi-modèles. L’exploration a montré que le dataset principal
+              captait bien le signal global de rendement, mais différenciait peu les cultures,
+              tandis qu’un dataset secondaire consolidé apportait une meilleure finesse pour
+              certaines recommandations ciblées.
+            </p>
+            <p>
+              La solution finale ne repose donc pas sur un modèle unique, mais sur trois briques :
+              un modèle principal culture-spécifique lorsque des profils enrichis existent,
+              un modèle général de repli, et un modèle secondaire de recommandation
+              plus adapté à certains cas couverts par le dataset annexe.
             </p>
           </article>
 
           <article class="content-block">
-            <h2>État d’avancement</h2>
-            <p>
-              Cette page sera enrichie au fur et à mesure de l’avancement du projet,
-              avec les données mobilisées, les choix méthodologiques retenus
-              et les premiers résultats.
-            </p>
-          </article>
-
-          <article class="content-block">
-            <h2>Compétences mobilisées</h2>
-            <ul class="inline-list">
-              <li>analyse de données ;</li>
-              <li>conception d’une solution orientée métier ;</li>
-              <li>recommandation ;</li>
-              <li>structuration de projet ;</li>
-              <li>aide à la décision.</li>
+            <h2>Ce que l’application permet</h2>
+            <ul>
+              <li>prédire le rendement d’une culture à l’hectare et à l’échelle d’une parcelle ;</li>
+              <li>fournir une marge d’erreur et des bornes basses / hautes ;</li>
+              <li>estimer le revenu, les coûts variables et la marge brute ;</li>
+              <li>classer plusieurs cultures candidates selon la marge brute estimée ;</li>
+              <li>modifier les hypothèses économiques depuis l’interface ;</li>
+              <li>signaler les cas moins fiables ou partiellement couverts par les données.</li>
             </ul>
+          </article>
+
+          <article class="content-block">
+            <h2>Architecture de la solution</h2>
+            <p>
+              Le projet repose sur une séparation claire entre interface, API, artefacts,
+              services métier et couche économique.
+            </p>
+            <ul>
+              <li><strong>FastAPI</strong> pour l’API métier ;</li>
+              <li><strong>Streamlit</strong> pour l’interface utilisateur ;</li>
+              <li><strong>SQLite</strong> pour stocker et modifier les hypothèses économiques ;</li>
+              <li><strong>plusieurs modèles ML</strong> pour la prédiction et la recommandation ;</li>
+              <li><strong>CI GitHub Actions + Docker + Docker Hub</strong> pour l’industrialisation.</li>
+            </ul>
+          </article>
+
+          <article class="content-block">
+            <h2>Ce que ce projet montre</h2>
+            <ul>
+              <li>ma capacité à partir d’un besoin métier concret ;</li>
+              <li>ma capacité à consolider plusieurs sources de données ;</li>
+              <li>mon aptitude à arbitrer entre plusieurs stratégies de modélisation ;</li>
+              <li>ma capacité à transformer un benchmark en architecture produit ;</li>
+              <li>ma capacité à aller jusqu’à l’API, l’interface, les tests et le déploiement.</li>
+            </ul>
+          </article>
+
+          <article class="content-block">
+            <h2>Compétences déjà mobilisées</h2>
+            <ul>
+              <li>exploration et nettoyage de données hétérogènes ;</li>
+              <li>benchmark de modèles de régression ;</li>
+              <li>construction d’une logique de recommandation orientée métier ;</li>
+              <li>mise en place d’une API FastAPI ;</li>
+              <li>développement d’une interface Streamlit ;</li>
+              <li>structuration d’une base SQLite modifiable par l’utilisateur ;</li>
+              <li>validation des entrées et sorties avec Pydantic ;</li>
+              <li>tests, CI et conteneurisation Docker.</li>
+            </ul>
+          </article>
+
+          <article class="content-block">
+            <h2>Compétences que ce projet m’a permis de renforcer</h2>
+            <ul>
+              <li>conception d’une architecture multi-modèles ;</li>
+              <li>routage métier entre plusieurs niveaux de couverture de données ;</li>
+              <li>intégration d’une couche économique à une prédiction ML ;</li>
+              <li>arbitrage entre performance statistique, robustesse et utilité métier ;</li>
+              <li>industrialisation d’un prototype data orienté produit.</li>
+            </ul>
+          </article>
+
+          <article class="content-block">
+            <h2>Limites assumées de la V1</h2>
+            <p>
+              La V1 reste un prototype métier. La couche économique est volontairement simplifiée
+              et dépend directement des prix et coûts actifs saisis dans SQLite. Les niveaux de
+              confiance relèvent d’une heuristique applicative plus que d’une modélisation
+              probabiliste avancée. Enfin, la qualité des recommandations reste liée à la couverture
+              réelle des cultures et des zones dans les données d’entraînement.
+            </p>
+          </article>
+
+          <article class="content-block">
+            <h2>Statut du projet</h2>
+            <p>
+              Le projet est réalisé sous la forme d’un prototype cohérent de prédiction et
+              de recommandation, avec interface, API, logique économique et socle
+              d’industrialisation.
+            </p>
+            <p>
+              <a href="../assets/docs/Auvin_Thomas_rapport_metier_032026.pdf" target="_blank" rel="noopener">
+                Consulter le rapport métier (PDF)
+              </a>
+            </p>
           </article>
         </div>
 
         <aside>
           <div class="aside-box">
-            <h3>Statut</h3>
-            <p>Projet en cours / à venir</p>
+            <h3>En 2 minutes</h3>
+            <ul>
+              <li>prédire un rendement ;</li>
+              <li>estimer une marge brute ;</li>
+              <li>classer plusieurs cultures ;</li>
+              <li>modifier les hypothèses économiques ;</li>
+              <li>exposer le tout via API + interface.</li>
+            </ul>
           </div>
 
           <div class="aside-box">
-            <h3>À compléter plus tard</h3>
-            <ul class="inline-list">
-              <li>repo GitHub ;</li>
-              <li>dataset et sources ;</li>
-              <li>captures ;</li>
-              <li>résultats ;</li>
-              <li>démo éventuelle.</li>
+            <h3>Technologies</h3>
+            <ul>
+              <li>Python</li>
+              <li>FastAPI</li>
+              <li>Streamlit</li>
+              <li>SQLite</li>
+              <li>Pydantic</li>
+              <li>GitHub Actions</li>
+              <li>Docker / Docker Hub</li>
+            </ul>
+          </div>
+
+          <div class="aside-box">
+            <h3>Livrables clés</h3>
+            <ul>
+              <li>modèles entraînés ;</li>
+              <li>API /predict et /recommend ;</li>
+              <li>interface Streamlit ;</li>
+              <li>édition des hypothèses économiques ;</li>
+              <li>tests API ;</li>
+              <li>CI/CD et images Docker.</li>
             </ul>
           </div>
         </aside>
